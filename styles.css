@@ -4,9 +4,9 @@ body {
 
 .wrapper {
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: auto; //scroll inside wrapper class instead of body 
   overflow-x: hidden;
-  perspective: 10px;
+  perspective: 10px; // 10px away from our screen
 }
 
 header {
@@ -16,15 +16,15 @@ header {
   align-items: center;
   height: 100%;
   transform-style: preserve-3d;
-  z-index: -1;
+  z-index: -1; // -1 because we text scroll upside header
 }
 
 .background {
-  transform: translateZ(-10px) scale(2);
+  transform: translateZ(-10px) scale(2); //-10px means It is already 10px away from the screen after adding -10px in the z-axis means it's double far away from the screen, To get a normal size we need to scale 2
 }
 
 .foreground {
-  transform: translateZ(-5px) scale(1.5);
+  transform: translateZ(-5px) scale(1.5); //-5px means It is already 10px away from the screen after adding -10px in the z-axis means it's double far away from the screen, To get a normal size we need to scale 1.5
 }
 
 .background,
@@ -32,14 +32,14 @@ header {
   position: absolute;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: cover; // To cover image in every screen of view
   z-index: -1;
 }
 
 .title {
   font-size: 7rem;
   color: white;
-  text-shadow: 0 0 5px black;;
+  text-shadow: 0 0 5px black; // To add show on text of welcome
 }
 
 section {
